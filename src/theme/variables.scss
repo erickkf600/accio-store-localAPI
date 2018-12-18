@@ -75,8 +75,12 @@ $searchbar-md-input-search-icon-color:(
 $searchbar-md-input-clear-icon-color:(
   #fff
 );
-
-
+@mixin back($escolha){
+  background: $escolha;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 // App Windows Variables
 // --------------------------------------------------
 // Windows only Sass variables can go here
