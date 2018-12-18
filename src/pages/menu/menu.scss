@@ -1,0 +1,42 @@
+.card-background-page {
+
+    ion-card {
+      position: relative;
+      text-align: center;
+      margin: 0px !important;
+      width: 100% !important;
+    }
+  
+    .card-title {
+      position: absolute;
+      top: 36%;
+      font-size: 3em;
+      font-family: 'Orbitron', sans-serif;
+      width: 100%;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 2px 2px #000;
+    }
+  
+    .card-subtitle {
+      font-size: 1.0em;
+      position: absolute;
+      top: 60%;
+      width: 100%;
+      color: #fff;
+      text-shadow: 1px 1px #000;
+    }
+  
+  }
+  ion-item{
+    h2{
+      text-transform: uppercase;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 20px;
+    }
+    ion-icon{
+      float: right
+    }
+  }
+
+

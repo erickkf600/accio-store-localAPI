@@ -1,0 +1,28 @@
+<ion-menu [content]="content">
+  <ion-content class="card-background-page">
+    <ion-card>
+        <img src="./assets/imgs/fundo2.jpg" />
+        <div class="card-title">ACCIO</div>
+        <div class="card-subtitle">Buscou? Achou</div>
+      </ion-card>
+  <ion-list>
+    <ion-item-divider color="dark">Categorias</ion-item-divider>
+      <ion-item>
+        <h2>Informática<ion-icon name="ios-arrow-down"></ion-icon></h2>
+      </ion-item>
+      <ion-item>
+        <h2>Eletrônicos<ion-icon name="ios-arrow-down"></ion-icon></h2>
+      </ion-item>
+      <ion-item>
+        <h2>Games<ion-icon name="ios-arrow-down"></ion-icon></h2>
+      </ion-item>
+      <ion-item>
+        <h2>Literatura<ion-icon name="ios-arrow-down"></ion-icon></h2>
+      </ion-item>
+      <ion-item>
+        <h2>Vestúario<ion-icon name="ios-arrow-down"></ion-icon></h2>
+      </ion-item>
+  </ion-list>
+</ion-content>
+</ion-menu>
+<ion-nav #content [root]="homePage"></ion-nav>

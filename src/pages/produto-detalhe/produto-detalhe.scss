@@ -1,0 +1,47 @@
+#header{
+    border-bottom: 2px solid #000;
+}
+#flex{
+    @extend %flex-box;
+    #title{
+        margin-top: .5rem
+    }
+    #button{
+        font-size: 2.5rem;
+        margin: 0;
+        padding: 1.5rem;
+    }
+}
+#texts{
+    font-family: 'Yantramanav', sans-serif; 
+    p{
+        font-size: 15px;
+        letter-spacing: 1.2
+    }
+}
+#linha-hr{
+    border-bottom: 2px solid color($colors, danger);
+    color: color($colors, danger);
+}
+#buttons{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    ion-icon{
+        margin-left: 7px 
+    }
+}
+#preco-prod{
+    margin-right: 30px;
+    p{
+        font-size: 25px;
+        font-weight: 600;
+        color: #f00;
+    }
+  }
+ion-list{
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    
+}

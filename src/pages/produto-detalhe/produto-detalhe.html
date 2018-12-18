@@ -1,0 +1,59 @@
+<ion-header id="header">
+  <ion-navbar>
+    <button ion-button menuToggle id="menu">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <div id="flex">
+      <ion-title id="title">
+        <img src="../../assets/imgs/title.png" width="120">
+      </ion-title>
+      <button ion-button clear color="dark" id="button">
+        <ion-icon md="md-search"></ion-icon>
+      </button>
+      <button ion-button clear color="dark" id="button">
+        <ion-icon name="md-cart"></ion-icon>
+      </button>
+    </div>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content id="content">
+  <div class="content">
+    <img src="../../assets/imgs/produtos/{{produtos.imagem}}.jpg" />
+    <ion-fab right top id="favorite">
+      <button ion-fab mini color="danger">
+        <ion-icon name="md-heart-outline"></ion-icon>
+      </button>
+    </ion-fab>
+    <div id="texts" padding>
+      <h2>{{produtos.titulo}}</h2>
+      <p>{{produtos.descricao}}</p>
+    </div>
+    <hr id="linha-hr">
+    <div id="flex">
+      <ion-list>
+        <ion-item col-6>
+          <ion-label>Quantidade:</ion-label>
+          <ion-input type="number"></ion-input>
+        </ion-item>
+        <ion-item col-6>
+          <ion-label>Cores</ion-label>
+          <ion-select [(ngModel)]="toppings" multiple="true">
+            <ion-option>Branco</ion-option>
+            <ion-option>Vermelho</ion-option>
+            <ion-option>Preto</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+      <div id="preco-prod">
+          <p>R${{produtos.preco}}</p>
+      </div>
+    </div>
+
+    <div id="buttons" padding>
+      <button ion-button color="amarelo">COMPRAR</button>
+      <button ion-button color="amarelo" outline>ADD CART<ion-icon name="cart"></ion-icon></button>
+    </div>
+  </div>
+</ion-content>
