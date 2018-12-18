@@ -7,6 +7,7 @@ import { Produtos } from '../../model/produtos';
 })
 export class ProdutoDetalhePage {
   produtos: Produtos;
+  barraPesq : false;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.produtos = this.navParams.get('produtos');
   }
