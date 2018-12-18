@@ -12,31 +12,13 @@
         <button ion-button color="amarelo" outline block (click)="cadastro()">Cadastrar-se</button>
       </div>
       <ion-item-divider color="dark">Categorias</ion-item-divider>
-      <ion-item>
-        <h2>Informática
-          <ion-icon name="ios-arrow-down"></ion-icon>
-        </h2>
-      </ion-item>
-      <ion-item>
-        <h2>Eletrônicos
-          <ion-icon name="ios-arrow-down"></ion-icon>
-        </h2>
-      </ion-item>
-      <ion-item>
-        <h2>Games
-          <ion-icon name="ios-arrow-down"></ion-icon>
-        </h2>
-      </ion-item>
-      <ion-item>
-        <h2>Literatura
-          <ion-icon name="ios-arrow-down"></ion-icon>
-        </h2>
-      </ion-item>
-      <ion-item>
-        <h2>Vestúario
-          <ion-icon name="ios-arrow-down"></ion-icon>
-        </h2>
-      </ion-item>
+      <ion-item-group *ngFor="let categ of categorias">
+        <ion-item>
+          <h2>{{categ.nome}}
+            <ion-icon name="ios-arrow-down"></ion-icon>
+          </h2>
+        </ion-item>
+      </ion-item-group>
     </ion-list>
   </ion-content>
 </ion-menu>
