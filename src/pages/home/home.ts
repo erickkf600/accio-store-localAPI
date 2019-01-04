@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, ToastController } from 'ionic-angular';
 import { Produtos } from "../../model/produtos";
 import { ITENS } from "../../conf/api.config";
 import { ProdutoDetalhePage } from '../../pages/produto-detalhe/produto-detalhe';
 import { CarrinhoPage } from '../carrinho/carrinho';
+import { AngularFireAuth } from 'angularfire2/auth';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -11,7 +12,7 @@ import { CarrinhoPage } from '../carrinho/carrinho';
 export class HomePage {
   produtos: Produtos[] = ITENS;
   barraPesq : false;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private autentic: AngularFireAuth, private toast: ToastController) {
   }
 
   prodpage(produtos : Produtos){
@@ -20,4 +21,13 @@ export class HomePage {
   carrinho(){
     this.navCtrl.push(CarrinhoPage);
   }
+  ionViewDidLoad() {
+    this.autentic.authState.subscribe(data => {
+      this.toast.create({
+        message: 'Bem Vindo, ${data.username}',
+        duration: 3000
+      });
+    });
+  }
+
 }

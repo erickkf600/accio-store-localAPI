@@ -8,14 +8,14 @@
 <ion-content padding id="login">
   <ion-list>
     <ion-item>
-      <ion-label stacked>Username</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-label stacked>Email</ion-label>
+      <ion-input type="text" [(ngModel)]='user.email'></ion-input>
     </ion-item>
     <ion-item>
 
       <ion-label stacked>Password</ion-label>
-      <ion-input type="password"></ion-input>
+      <ion-input type="password" [(ngModel)]='user.senha'></ion-input>
     </ion-item>
   </ion-list>
-  <button ion-button block (click)="loginFunction()" color="amarelo">ENTRAR</button>
+  <button ion-button block (click)="loginFunction(user)" color="amarelo">ENTRAR</button>
 </ion-content>

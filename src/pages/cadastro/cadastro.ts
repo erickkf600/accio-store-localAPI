@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the CadastroPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { User } from '../../model/user';
+import { AngularFireAuth } from 'angularfire2/auth';
 
 @IonicPage()
 @Component({
@@ -14,12 +9,22 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'cadastro.html',
 })
 export class CadastroPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  user = {} as User;
+  constructor(public navCtrl: NavController, public navParams: NavParams, private autentic: AngularFireAuth, private alertCtrl: AlertController) {
   }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad CadastroPage');
+  async cadastroFunction(user: User){
+    try{
+      const result = await this.autentic.auth.createUserWithEmailAndPassword(user.email, user.senha);
+      console.log(result);
+    }
+    catch(e){
+      let alert = this.alertCtrl.create({
+        title: 'ERRO DE CONEXÃO',
+        subTitle: 'Por favor, cheque sua internet e tente novamente',
+        buttons: ['OK']
+      });
+      alert.present();
+    }
   }
 
 }

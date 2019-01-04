@@ -12,32 +12,32 @@
     <ion-list>
       <ion-item>
         <ion-label stacked>Nome</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" [(ngModel)]='user.nome'></ion-input>
       </ion-item>
       <ion-item>
         <ion-label stacked>Email</ion-label>
-        <ion-input type="email"></ion-input>
+        <ion-input type="email" [(ngModel)]='user.email'></ion-input>
       </ion-item>
       <ion-item>
         <ion-label stacked>CEP</ion-label>
-        <ion-input type="number"></ion-input>
+        <ion-input type="number" [(ngModel)]='user.cep'></ion-input>
       </ion-item>
       <ion-item>
         <ion-label stacked>Número</ion-label>
-        <ion-input type="number"></ion-input>
+        <ion-input type="number" [(ngModel)]='user.numero'></ion-input>
       </ion-item>
       <ion-item>
         <ion-label stacked>Telefone</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" [(ngModel)]='user.telefone'></ion-input>
       </ion-item>
       <ion-item>
         <ion-label stacked>Username</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" [(ngModel)]='user.uername'></ion-input>
       </ion-item>
       <ion-item>
         <ion-label stacked>Password</ion-label>
-        <ion-input type="password"></ion-input>
+        <ion-input type="password" [(ngModel)]='user.senha'></ion-input>
       </ion-item>
     </ion-list>
-    <button ion-button block (click)="cadastroFunction()" color="amarelo">CADASTRAR</button>
+    <button ion-button block (click)="cadastroFunction(user)" color="amarelo">CADASTRAR</button>
   </ion-content>

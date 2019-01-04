@@ -7,6 +7,24 @@
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content>
+  <ion-list>
+    <ion-item id="ion-item">
+      <ion-thumbnail item-start>
+        <img src="img/thumbnail-totoro.png">
+      </ion-thumbnail>
+      <div id="item">
+        <p>Hayao Miyazaki</p>
+        <div id="actions">
+          <button ion-button color="danger" on-click="add(inp)">
+            <ion-icon name="add" ></ion-icon>
+          </button>
+          <input type="number" value="0" min="0" id="input">
+          <button ion-button color="danger" on-click="remove(inp)">
+            <ion-icon name="remove" ></ion-icon>
+          </button>
+        </div>
+      </div>
+    </ion-item>
+  </ion-list>
 </ion-content>

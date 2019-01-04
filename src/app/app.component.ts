@@ -5,6 +5,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { MenuPage } from '../pages/menu/menu';
 
+import { AngularFireAuth } from 'angularfire2/auth';
+
 @Component({
   templateUrl: 'app.html'
 })
@@ -13,7 +15,7 @@ export class MyApp {
 
   rootPage: any = MenuPage;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, private autentic: AngularFireAuth) {
     this.initializeApp();
   }
 

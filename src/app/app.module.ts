@@ -13,6 +13,9 @@ import { CarrinhoPage } from '../pages/carrinho/carrinho';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { AngularFireAuth } from 'angularfire2/auth';
+import { AngularFireModule } from '@angular/fire';
+import { FirebaseConfig } from '../conf/firebase.config';
 
 @NgModule({
   declarations: [
@@ -28,6 +31,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(FirebaseConfig)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -43,6 +47,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
+    AngularFireAuth,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
